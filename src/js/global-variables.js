@@ -2,11 +2,10 @@ module.exports =
 {
     env:
     {
-        api: "https://api.etf-data.com",
-        //api: "https://test.api.etf-data.com",
-        //api: "http://127.0.0.1:8666",
+        //api: "https://api.etf-data.com",
+        api: "http://test.api.vattly.com",
         website: "https://etf-data.com/",
         //website: "http://localhost:8080",
-        name: "ETF Data API",
+        name: "Vattly",
     }
 }

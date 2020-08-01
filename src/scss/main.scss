@@ -71,54 +71,38 @@ body {
   Design Components
   -------------------- !*/
 .background {
-  background: linear-gradient(90deg, $color-gray-200 0%, $color-gray-100 100%);
+  background: linear-gradient(90deg, $color-blue-500 0%, $color-blue-400 100%);
   top: 0;
   z-index: 0;
   position: absolute;
   height: 100vh;
-  transform: skewY(-12deg);
-  margin-top: -50vh;
+  min-height: 1400px;
+  transform: skewY(-12deg) translateY(-50%);
   width: 100%;
 
   .stripe-primary {
-    background: linear-gradient(
-      90deg,
-      rgba($color-blue-500, 0) 0%,
-      rgba($color-blue-500, 0) 40%,
-      $color-blue-500 50%,
-      $color-blue-400 100%
-    );
-    width: 100%;
+    background: $color-green-200;
+    width: 60%;
     height: 10vh;
     position: absolute;
+    margin-bottom: -9.95vh;
     bottom: 0;
   }
 
   .stripe-secondary {
-    background: linear-gradient(
-      90deg,
-      $color-gray-100 50%,
-      $color-gray-200 100%
-    );
-    width: 50%;
+    background: $color-blue-500;
+    width: 40%;
     height: 10vh;
-    margin-bottom: -10vh;
     position: absolute;
     bottom: 0;
+    transform: translateX(160%);
+    display: none
   }
 }
 
-.card {
-  @include borders-box;
-  @include elevation-1;
-  background-color: $color-gray-000;
-
-  padding: 4rem;
-  @media (max-width: 992px) {
-    & {
-      padding: 2rem;
-    }
-  }
+.dark
+{
+  color: $color-gray-200;
 }
 
 .plan {
@@ -154,7 +138,6 @@ body {
   @include borders-box-layered;
   margin-top: 0.8rem;
   margin-bottom: 2.5rem;
-  background-color: $color-gray-200;
   color: $color-gray-400;
   overflow: hidden;
   header {
@@ -168,6 +151,16 @@ body {
       border-bottom: 1px solid $color-green-100;
       animation: blinker-border 1.4s linear infinite;
     }
+
+    &.light
+    {
+      background-color: $color-blue-500;
+    }
+  }
+
+  & > *:nth-child(2)
+  {
+    background-color: $color-gray-200;
   }
 
   .json-formatter-row,
@@ -244,7 +237,7 @@ nav.side-menu {
     }
 
     li {
-      color: $color-gray-400;
+      color: $color-gray-300;
 
       // Second level headers
       li {
@@ -320,38 +313,37 @@ nav.side-menu {
 }
 
 /*! ---------------------
-  Chart styles
-  -------------------- !*/
-.chart-legend text {
-  @include typography-footnote;
-}
-
-.chart-container .legend-dataset-text {
-  fill: $color-gray-300;
-}
-
-/*! ---------------------
   Content formatting styles
   -------------------- !*/
 .content {
+
   h1 {
+    @include typography-1;
+  }
+
+  h2 {
     @include typography-2;
     color: $color-blue-500;
   }
 
-  h2 {
+  h3 {
     @include typography-4;
   }
 
-  h1,
-  h2 {
+  h2,
+  h3 {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  h3,
-  h6 {
+  h4,
+  h5 {
     @include typography-5;
+  }
+
+  & > *:first-of-type
+  {
+    margin-bottom:24rem;
   }
 
   & > .container-fluid {
