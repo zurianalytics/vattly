@@ -1,0 +1,114 @@
+<html>
+  <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PR5JXNB');</script>
+  <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="noindex" />
+
+    <!-- Website Title -->
+    <title>Thank you for your subscription!</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="/images/etf-data_logo.png" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR5JXNB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Styles -->
+    <style>
+      <%- include('../dist/scss/main.css') -%>
+      <%- include('../dist/js/tippy.bundle.css') -%>
+    </style>
+
+    <div class="background">
+      <div class="stripe-primary"></div>
+      <div class="stripe-secondary"></div>
+    </div>
+
+    <div class="page container" id="app">
+      <!-- Left Side Menu -->
+      <div class="row">
+        <div class="col-md-2">
+          <% include _includes/section-side-menu-static %>
+        </div>
+
+        <div class="col-md-10">
+          <!-- Main Page Conent -->
+          <div class="content">
+            <!-- Page content -->
+            <div class="container-fluid card">
+              <div class="col-md-6">
+                <h1>
+                  <i class="zuri-icon success size-l align-middle left"></i>Thank you!
+                </h1>
+
+                <p>
+                  Your subscripion plan will be activated shortly.
+                </p>
+
+                <p>
+                  You can <b>manage your subscription</b>
+                  <a
+                    class="link"
+                    href="https://etf-data.com/#manage-subscription"
+                    >here.</a
+                  >
+                </p>
+
+                <p>
+                  If you have any questions or problems, please don't hesitate to contact us
+                  at
+                  <a class="link" href="mailto:support@zurianalytics.com"
+                    >support@zurianalytics.com</a
+                  >
+                </p>
+              </div>
+
+              <div class="col-md-6">
+                <h1>
+                    <i class="zuri-icon lock size-l align-middle"></i>Your token
+                </h1>
+
+                <form id="manage-subscription-form" method="GET" class="tile">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group" data-children-count="1">
+                        <label class="label top">Save your token to a secure location:</label>
+                        <textarea
+                          id="api-token-manage"
+                          v-model="token"
+                          readonly="readonly"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Global Vue (Needed for everything) -->
+  <script src="/js/vue.external.js"></script>
+
+  <script src="/js/success.bundle.js"></script>
+</html>

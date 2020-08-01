@@ -1,0 +1,40 @@
+
+
+<nav class = "side-menu" id = "side-menu" v-bind:class="{ 'is-active': interaction.menu }">
+
+    <div style = "text-align: center" class = "action">
+        <button class="hamburger hamburger--elastic" type="button" v-bind:class="{ 'is-active': interaction.menu }" v-on:click.prevent="interaction.menu = !interaction.menu">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
+    <div class="representation">
+        <a href="#">
+            <img class="logo" src="/images/etf-data_logo.png"/>
+            <header>
+                <span class="accent-blue">ETF</span> Data API
+                <div class = "note">Quality ETF fundamental </br> data, updated daily.</div>
+            </header>
+        </a>
+    </div>
+
+    <ul>
+        <li v-for="i in menuItems">
+            <a :href="'#' + i.id" @click="smoothScrollToLink(i.linkTo, $event)">{{i.content}}</a>
+
+            <ul v-if="i.subs.length > 0">
+                <li v-for="si in i.subs">
+                    <a :href = "'#' + si.id" @click="smoothScrollToLink(si.linkTo, $event)">{{si.content}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <footer>
+        <ul>
+            <li class = "note">This is a <a class = "link" href='https://zurianalytics.com'>ZuriAnalytics</a> API.</a></li>
+        </ul>
+    </footer>
+</nav>

@@ -1,0 +1,37 @@
+
+<div class="container-fluid" menu-item = "Authentication" id="authentication" top>
+
+    <h1>Authentication<i class = "zuri-icon lock size-l align-middle right"></i></h1>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <p>
+                {{apiName}} uses tokens to authenticate requests. These tokens are computed automatically by
+                {{apiName}} when the page is visited.
+                Tokens are loaded with time and calls when you <a class="link"
+                                                                    href="#subscriptions-app">subscribe.</a>
+            </p>
+            <p>
+                Once a token has been loaded, it can be <a class="link" href="#manage-subscription"> managed, cancelled and
+                renewed.</a>
+            </p>
+            <p>
+                To make a request, just pass the token in the query string as follows:
+            </p>
+            <p>
+                <code class="inline">https://api-url?token=<span class="accent-hard">YOUR_TOKEN</span></code>
+            </p>
+
+            <p>
+                Your tokens carry many privileges, so make sure to keep them secure! Do not share your token in
+                publicly accessible areas such as GitHub, client-side code, and so forth.
+            </p>
+            <p>
+                All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without
+                authentication will also fail.
+                There is a daily limit of a few unauthenticated calls.
+            </p>
+        </div>
+    </div>
+</div>

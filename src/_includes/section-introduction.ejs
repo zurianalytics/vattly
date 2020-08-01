@@ -1,0 +1,152 @@
+
+    <div class="container-fluid card" id="introduction" menu-item="ETF Data API" top>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                
+                <h1>ETF Data API<i class = "zuri-icon information size-l align-middle right"></i></h1>
+
+                <p>
+                    We provide fundamental information, about all ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
+                </p>
+
+                <p>
+                    We carefully research and regulary update basic information such as: 
+                    Domicile, Followed Index, Asset Class, Fee, Currency, Replication Method, Distribution Type & Frequency.
+                </p>
+                
+                <p>
+                    Deep fundamental information is derived using Machine Learning and Artificial Intelligence to learn about the underlying securities. Our models currently 
+                    recognize Sector Exposure, Country Exposure, Factors & Dividend Yield.
+                </p>
+
+                <div class = "container-fluid">
+                    <div class = "row">
+                        <div class = "col-sm-6">
+                            <div class = "marg-m">
+                                <div class = "row">
+                                    <div class = "col-al-2">
+                                        <i class = "zuri-icon kubernetes size-l left"></i>
+                                    </div>
+                                    <div class = "col-al-10">
+                                        <h3>Highly Available</h3>
+                                        <div class = "label">Build with Kubernetes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-sm-6">
+                            <div class = "marg-m">
+                                <div class = "row">
+                                    <div class = "col-al-2">
+                                        <i class = "zuri-icon lighting size-l left"></i>
+                                    </div>
+                                    <div class = "col-al-10">
+                                        <h3>93 ms</h3>
+                                        <div class = "label">Median Response Time</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    <div style = "text-align: right;">
+
+                        <span class = "accent-bold align-middle">SEE THE DATA WE HAVE</span><i class = "zuri-icon arrow-right align-middle right"></i>
+
+                    </div>
+                </p>
+
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="accent-box .light">
+
+                    <header id="demo-header">
+                        <a v-bind:href="url">
+                            <i class = "zuri-icon terminal"></i><code class = "accent-blink">GET</code><code>product/</code>
+                        </a>
+                        <input v-model="isin" v-on:change="getFund()"/>
+                    </header>
+                    
+                    <div id = "demo-error" v-if = "fundError">
+                        {{fundError}}
+                    </div>
+
+                    <div id="demo-content" v-if = "!fundError">
+
+                        <div class="row padd-s">
+                            <div class="col-sm-12">
+                                <h6 class = "accent-blue">{{ fund.name }}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row padd-s">
+
+                            <div class="col-sm-12">
+                                <div class = "label">Sector Allocation</div>
+                                <div id="sectors" style="width: 120%; margin-left: -10%"></div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class = "label marg-t-m">Country Allocation</div>
+                                <div id="countries" style="width: 120%; margin-left: -10%"></div>
+                            </div>
+                        </div>
+
+                        <div class="row padd-s marg-t-m">
+                            <div class="col-sm-12">
+                                <label class = "label">Index</label><br/>
+                                <span class = "accent-bold">{{ fund.indexName }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row padd-s">
+                            <div class="col-sm-6">
+                                <label class = "label">ISIN:</label> <span class = "accent-bold">{{ fund.isin }}</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class = "label">Asset Class:</label> <span class = "accent-bold">{{ fund.assetClass }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row padd-s">
+                            <div class="col-sm-6">
+                                <label class = "label">Total Fee:</label> <span class = "accent-bold">{{ fund.totalFee }}%</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class = "label">Base Currency:</label> <span class = "accent-bold">{{ fund.baseCurrency }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row padd-s">
+                            <div class="col-sm-6">
+                                <label class = "label">Dist. Type:</label> <span class = "accent-bold">{{ fund.distributionType }}</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class = "label">Dist. Schedule:</label> <span class = "accent-bold">{{ fund.frequency }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row padd-s">
+                            <div class="col-sm-6">
+                                <label class = "label">Domicile:</label> <span class = "accent-bold">{{ fund.domicile }}</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class = "label">Replication:</label> <span class = "accent-bold">{{ fund.replicationMethod }}</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
