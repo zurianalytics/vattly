@@ -5,20 +5,21 @@
 
             <div class="col-md-6">
                 
-                <h1 class = "accent">VAT Validation API<i class = "zuri-icon information size-l align-middle right"></i></h1>
+                <h1 class = "accent">VAT Validation API</h1>
                 <p>
-                    {{ apiName }} is a REST API that does one thing, and does it very well. It is blazing fast, higly available. 
+                    {{ apiName }} is a REST API that does one thing, and does it very well. It is blazing fast & higly available. 
 
                     Our scaleble infrastructure allows us to price our product <span class = "accent-green">5x times cheaper</span>  then our competitors.
+                
                 </p>
-
+            
                 <div class = "container-fluid">
                     <div class = "row">
                         <div class = "col-sm-6">
                             <div class = "marg-m">
                                 <div class = "row">
                                     <div class = "col-al-2">
-                                        <i class = "zuri-icon kubernetes size-l left"></i>
+                                        <i class = "zuri-icon levels size-l left"></i>
                                     </div>
                                     <div class = "col-al-10">
                                         <h4>Highly Available</h4>
@@ -31,11 +32,15 @@
                             <div class = "marg-m">
                                 <div class = "row">
                                     <div class = "col-al-2">
-                                        <i class = "zuri-icon lighting size-l left"></i>
+                                        <svg class = "zuri-icon lighting size-l left" xmlns='http://www.w3.org/2000/svg' width="16px" height="12px" class="indicator" 
+                                        style = "transform: scale(2); margin-left: 10px; margin-top: 10px;">
+                                            <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                                            <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                                        </svg>
                                     </div>
                                     <div class = "col-al-10">
-                                        <h4>93 ms</h4>
-                                        <div class = "label">Median Response Time</div>
+                                        <h4><span id = "count-up">90</span> ms</h4>
+                                        <div class = "label">Response Time</div>
                                     </div>
                                 </div>
                             </div>
@@ -46,24 +51,11 @@
                             <div class = "marg-m">
                                 <div class = "row">
                                     <div class = "col-al-2">
-                                        <i class = "zuri-icon kubernetes size-l left"></i>
+                                        <i class = "zuri-icon card size-l left"></i>
                                     </div>
                                     <div class = "col-al-10">
                                         <h4>0.0015 €/request</h4>
                                         <div class = "label">Unbeatable Price</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "col-sm-6">
-                            <div class = "marg-m">
-                                <div class = "row">
-                                    <div class = "col-al-2">
-                                        <i class = "zuri-icon lighting size-l left"></i>
-                                    </div>
-                                    <div class = "col-al-10">
-                                        <h4>93 ms</h4>
-                                        <div class = "label">Median Response Time</div>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +84,7 @@
 
                         <div>
                             <code class="json">
-                                {"totalFee":0.41,"indexName":"DJ Sustainability Eurozone ex Alcohol, Tobacco, Gambling, Armaments & Firearms and Adult Entertainment Index"}
+                                {"validFormat":true,"validVat":true,"companyName":"Red Bull GmbH","companyAddress":"Am Brunnen 1\nAT-5330 Fuschl am See","countryCode":"AT"}
                             </code>
                         </div>
 

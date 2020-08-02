@@ -76,7 +76,7 @@ body {
   z-index: 0;
   position: absolute;
   height: 100vh;
-  min-height: 1400px;
+  min-height: 1500px;
   transform: skewY(-12deg) translateY(-50%);
   width: 100%;
 
@@ -182,7 +182,21 @@ body {
   .json-formatter-null {
     color: $color-gray-400;
   }
+
+  .json-formatter-boolean 
+  {
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &.true
+    {
+        color: $color-green-100;
+    }
+  }
 }
+
+
+
 
 /*! ---------------------
 Side menu

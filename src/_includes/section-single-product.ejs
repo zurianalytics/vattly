@@ -1,38 +1,29 @@
 
-    <section class="container-fluid" id="get-individual-etf" menu-item="Individual Product" top>
+    <section class="container-fluid" id="get-individual-etf" menu-item="Usage" top>
 
-        <h2>Individual Product<i class = "zuri-icon code size-l align-middle right"></i></h2>
+        <h2>Usage<i class = "zuri-icon code size-l align-middle right"></i></h2>
 
         <div class="row">
 
             <div class="col-md-6">
 
-                    <p>This endpoint searches for a product (like ETFs) by its <a class="info" data-tippy-content="
-          An International Securities Identification Number (ISIN)
-          uniquely identifies a security. It can be safely reused across applications">ISIN.<i class = "zuri-icon lightbulb"></i></a>
-                    </p>
-
                     <p>
-                        Retrieves all of the information known for a specific product in a <a class = "info"
-                        data-tippy-content = "The blue box shows the output format for this method call and can be interacted with. 
-                        Feel free to explore the output by expanding/ collapsing its components."
-                        >JSON format.<i class = "zuri-icon lightbulb"></i></a>
+                        There is only one endpoint to this API. You can use it (unauthenticated) by calling the following url: 
                     </p>
-
-                        <p>
-                            In order to search for a product with a specific <span class = "accent-green">ISIN</span> use:
-                        </p>
-                        <p>
-                            <code class="inline">{{apiUrl}}/product/<span class="accent-hard">ISIN</span></code>
-                        </p>
+                    <p>
+                        <code class="inline">{{apiUrl}}/verify/<span class="accent-blue">VAT</span></code>
+                    </p>
 
                     <h4 class = "marg-m">Parameters</h4>
                     <ul>
                         <li>
-                            <code class="accent-bold">isin</code> <code class="accent-gray">String</code> <code
+                            <code class="accent-bold">VAT</code> <code class="accent-gray">String</code> <code
                                 class="accent-hard">Mandatory</code>
                             <p>
-                                The ISIN that distinctly identifies the product.
+                                The VAT to validate. In case the VAT is malformed, e.g., the format is not as described by the  <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number">respective national insitution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
+                            </p>
+                            <p>
+                                All non-EU (with the excpetion of the United Kingdom) VATs will be rejected.
                             </p>
                         </li>
                     </ul>
@@ -43,13 +34,14 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <a v-bind:href="apiUrl + '/product/' + 'DE000A0F5UG3'" ><i class = "zuri-icon terminal "></i><code class = "accent-blink">GET</code><code>{{apiUrl}}/product/<span class="accent-hard">DE000A0F5UG3</span></code></a>
+                        <a v-bind:href="apiUrl + '/validate/' + 'DE999999999'" ><i class = "zuri-icon terminal "></i><code class = "accent-blink">GET</code><code>{{apiUrl}}/product/<span class="accent-hard">DE000A0F5UG3</span></code></a>
                     </header>
 
 
-                    <div><code class="json">
-                     {"totalFee":0.41,"indexName":"DJ Sustainability Eurozone ex Alcohol, Tobacco, Gambling, Armaments & Firearms and Adult Entertainment Index","name":"iShares Dow Jones Eurozone Sustainability Screened UCITS ETF (DE)","isin":"DE000A0F5UG3","provider":"iShares","domicile":"DEU","baseCurrency":"EUR","assetClass":"EQUITY","replicationMethod":"PHYSICAL","factor":null,"distributionFrequency":null,"distributionType":"DISTRIBUTING","listings":[{"currency":"EUR","exchange":"XETRA","ticker":"EXXV","reutersTicker":"SUBEEX.DE","bloombergTicker":"SUBEEX GY"},{"currency":"EUR","exchange":"SIX","ticker":"SUBEEX","reutersTicker":"EXXV.S","bloombergTicker":"SUBEEX SE"}],"regions":[{"country":"FRA","percentage":37.25},{"country":"DEU","percentage":26.92},{"country":"NLD","percentage":12.56},{"country":"ESP","percentage":12.35},{"country":"ITA","percentage":3.99},{"country":"FIN","percentage":3.34},{"country":"IRL","percentage":1.79},{"country":"PRT","percentage":1.08}],"sectors":[{"sector":"FINANCIALS","percentage":15.69},{"sector":"INFORMATION_TECHNOLOGY","percentage":13.88},{"sector":"INDUSTRIALS","percentage":12.18},{"sector":"HEALTH_CARE","percentage":12.01},{"sector":"CONSUMER_DISCRETIONARY","percentage":11.39},{"sector":"UTILITIES","percentage":9.3},{"sector":"CONSUMER_STAPLES","percentage":9.28},{"sector":"ENERGY","percentage":8.55},{"sector":"MATERIALS","percentage":6.25}]}
-</code>
+                    <div>
+                        <code class="json">
+                            {"validFormat":true,"validVat":false,"companyName":null,"companyAddress":null,"countryCode":"DE"}
+                        </code>
                     </div>
                 </div>
 
