@@ -2,39 +2,32 @@
 <head>
     <!-- Tracking Pixels -->
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PR5JXNB');</script>
     <!-- End Google Tag Manager -->
 	
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Quality European ETF, ETN and ETC data, updated daily. Complete overview including sector, country, factor, dividend yield and valuations. Additionally basic information such as domicile, followed index, asset class, fee, currency, replication method, distribution type and frequency. Try for free.">
+    <meta name="description" content="Vattly - Fast and secure VAT validation API">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="ETF Data API"/> 
-	<meta property="og:site" content="https://etf-data.com/"/> 
-	<meta property="og:title" content="Quality ETF fundamental data, updated daily"/> <!-- title shown in the actual shared post -->
+	<meta property="og:site_name" content="VAT validation API"/> 
+	<meta property="og:site" content="https://vattly.com/"/> 
+	<meta property="og:title" content="Fast & Secure JASON EU VAT Validation API"/> <!-- title shown in the actual shared post -->
 	<meta property="og:description" content="Homepage" />
-	<meta property="og:image" content="images/etf-data_logo.png"/> 
-	<meta property="og:url" content="https://etf-data.com/"/> 
+	<meta property="og:image" content="images/Vattly_logo_dark.png"/> 
+	<meta property="og:url" content="https://vattly.com/"/> 
 	<meta property="og:type" content="article"/>
 
     <!-- Website Title -->
-    <title>ETF Data API - Complete overview of European funds updated daily</title>
+    <title>Vattly - Fast and secure EU VAT validation API</title>
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="/images/etf-data_logo.png">
+    <link rel="icon" href="/images/Vattly_logo_dark.png">
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR5JXNB"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Styles -->
@@ -129,10 +122,10 @@ Side menu
 
     <div class="representation">
         <a href="#">
-            <img class="logo" src="/images/etf-data_logo.png"/>
+            <img class="logo" src="/images/Vattly_logo_light.png"/>
             <header>
                 <span class="accent-blue">Vattly</span>
-                <div class = "note">Fast & Secure REST </br> EU VAT Validation API</div>
+                <div class = "note">Fast & Secure JASON </br> EU VAT Validation API</div>
             </header>
         </a>
     </div>
@@ -151,7 +144,7 @@ Side menu
 
     <footer>
         <ul>
-            <li class = "note">This is a <a class = "link" href='https://zurianalytics.com'>ZuriAnalytics</a> API.</a></li>
+            <li class = "note">This is a <a class = "link" href='https://zurianalytics.com' target="_blank">ZuriAnalytics</a> API.</a></li>
         </ul>
     </footer>
 </nav>
@@ -172,9 +165,9 @@ Side menu
                 
                 <h1 class = "accent">VAT Validation API</h1>
                 <p>
-                    {{ apiName }} is a REST API that does one thing, and does it very well. It is blazing fast & higly available. 
+                    {{ apiName }} is a JASON API that does one thing, and does it very well. It is blazing fast & highly available. 
 
-                    Our scaleble infrastructure allows us to price our product <span class = "accent-green">5x times cheaper</span>  then our competitors.
+                    Our scalable infrastructure allows us to price our product <span class = "accent-green">5x times cheaper</span> than our competitors'.
                 
                 </p>
             
@@ -284,7 +277,7 @@ Side menu
                             <code class="accent-bold">VAT</code> <code class="accent-gray">String</code> <code
                                 class="accent-hard">Mandatory</code>
                             <p>
-                                The VAT to validate. In case the VAT is malformed, e.g., the format is not as described by the  <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number">respective national insitution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
+                                The VAT to validate. In case the VAT is malformed, e.g. the format is not as described by the  <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
                             </p>
                             <p>
                                 All non-EU (with the excpetion of the United Kingdom) VATs will be rejected.
