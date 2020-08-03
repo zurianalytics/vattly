@@ -14,12 +14,12 @@
     "countup.js": "^2.0.6",
     "frappe-charts": "^1.5.2",
     "json-formatter-js": "^2.3.4",
-    "tippy.js": "^6.2.3"
+    "tippy.js": "^6.2.6"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "parcel": "^1.12.4",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.5"
+    "sass": "^1.26.10"
   }
 }
