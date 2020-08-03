@@ -17,7 +17,7 @@ new Vue({
             payment:
                 {
                     stripe: null,
-                    clientSecret: "pk_live_Ku4juyvaWDrHh3DQHg55aFaI00pj25URBI",
+                    clientSecret: env.stripeKey,
                     plan: null,
                     token: null,
                     processing: false,
