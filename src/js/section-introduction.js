@@ -68,9 +68,9 @@ new Vue({
                         if (typeof error.response === "undefined")
                             this.vatError = "Unspecified error occured."
                         else if (error && error.response.status == 404)
-                            this.vatError = "Unfortunatelly the page provided could not be found. Did you try with a correct VAT?"
+                            this.vatError = "Unfortunately the page provided could not be found. Did you try with a correct VAT?"
                         else if (error && error.response.status == 401)
-                            this.vatError = "Unfortunatelly your free requests have expired."+ 
+                            this.vatError = "Unfortunately your free requests have expired."+ 
                             " Please feel free to visit again tomorrow, or subscribe to a plan."
                     })
             },
