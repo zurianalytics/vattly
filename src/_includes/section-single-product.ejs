@@ -8,7 +8,7 @@
             <div class="col-md-6">
 
                     <p>
-                        There is only one endpoint to this API. You can use it (unauthenticated) by calling the following url: 
+                        There is only one endpoint to this VAT validation API. You can use it (unauthenticated) by calling the following url: 
                     </p>
                     <p>
                         <code class="inline">{{apiUrl}}/verify/<span class="accent-blue">VAT</span></code>
@@ -20,10 +20,10 @@
                             <code class="accent-bold">VAT</code> <code class="accent-gray">String</code> <code
                                 class="accent-hard">Mandatory</code>
                             <p>
-                                The VAT to validate. In case the VAT is malformed, e.g. the format is not as described by the  <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
+                                The VAT number to validate. In case the VAT number is malformed, e.g. the format is not as described by the <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
                             </p>
                             <p>
-                                All non-EU (with the excpetion of the United Kingdom) VATs will be rejected.
+                                All non-EU (with the excpetion of the United Kingdom) VAT numbers will be rejected.
                             </p>
                         </li>
                     </ul>
