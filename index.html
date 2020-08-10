@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Vattly is a cheap, highly available, fast and secure VAT validation API. We offer high scalability. Our data provides full European Union coverage">
+    <meta name="description" content="Vattly is a cheap, highly available, fast and secure VAT validation API. Our VAT API offers free requests and is highly scalable. Our VAT check API provides full European Union coverage including VAT numbers from Germany, France, Italy, Ireland, Netherlands, Poland, Hungary, Spain, Romania and many more.">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="VAT validation API"/> 
@@ -25,7 +25,7 @@
 	<meta property="og:type" content="article"/>
 
     <!-- Website Title -->
-    <title>Vattly - Fast and secure EU VAT validation API</title>
+    <title>Vattly - Fast and secure EU VAT number validation API</title>
 	
 	<!-- Favicon  -->
     <link rel="icon" href="/images/Vattly_logo_dark.png">
@@ -172,9 +172,9 @@ Side menu
                 
                 <h1 class = "accent">VAT Validation API</h1>
                 <p>
-                    {{ apiName }} is a JSON API that does one thing, and does it very well. It is blazing fast & highly available. 
+                    {{ apiName }} is a JSON VAT verification API that does one thing, and does it very well. It is blazing fast & highly available. 
 
-                    Our scalable infrastructure allows us to price our product <span class = "accent-green">5x times cheaper</span> than our competitors'.
+                    Our scalable infrastructure allows us to price our VAT validation API <span class = "accent-green">5x times cheaper</span> compared to our competitors.
                 
                 </p>
             
@@ -219,7 +219,7 @@ Side menu
                                         <i class = "zuri-icon card size-l left"></i>
                                     </div>
                                     <div class = "col-al-10">
-                                        <h4>0.003 €/request</h4>
+                                        <h4>0.003 €/ request</h4>
                                         <div class = "label">Unbeatable Price</div>
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@ Side menu
             <div class="col-md-6">
 
                     <p>
-                        There is only one endpoint to this API. You can use it (unauthenticated) by calling the following url: 
+                        There is only one endpoint to this VAT validation API. You can use it (unauthenticated) by calling the following url: 
                     </p>
                     <p>
                         <code class="inline">{{apiUrl}}/verify/<span class="accent-blue">VAT</span></code>
@@ -284,10 +284,10 @@ Side menu
                             <code class="accent-bold">VAT</code> <code class="accent-gray">String</code> <code
                                 class="accent-hard">Mandatory</code>
                             <p>
-                                The VAT to validate. In case the VAT is malformed, e.g. the format is not as described by the  <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
+                                The VAT number to validate. In case the VAT number is malformed, e.g. the format is not as described by the <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
                             </p>
                             <p>
-                                All non-EU (with the excpetion of the United Kingdom) VATs will be rejected.
+                                All non-EU (with the excpetion of the United Kingdom) VAT numbers will be rejected.
                             </p>
                         </li>
                     </ul>
@@ -323,7 +323,7 @@ Side menu
 
         <div class="col-md-6">
             <p>
-                {{apiName}} uses tokens to authenticate requests. These tokens are computed automatically by
+                Our VAT verification API uses tokens to authenticate requests. These tokens are computed automatically by
                 {{apiName}} when the page is visited.
                 Tokens are loaded with time and calls when you <a class="link"
                                                                     href="#subscriptions-app">subscribe.</a>
