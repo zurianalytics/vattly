@@ -269,10 +269,13 @@ Side menu
 
         <div class="row">
 
-            <div class="col-md-6">
-
+            <div class="col-md-6" itemscope itemtype="https://schema.org/Thing">
+                <meta itemprop="name" content="VAT number validation API" />
+                <link itemprop="url" href="https://vattly.com/"/>
                     <p>
-                        There is only one endpoint to this VAT validation API. You can use it (unauthenticated) by calling the following url: 
+                    <span itemprop="description">
+
+                        There is only one endpoint to this VAT validation API, which takes the VAT number in the request, checks if that number is valid, and if it is valid, returns additional details about the company associated with that VAT number. </span>You can use it (unauthenticated) by calling the following url: 
                     </p>
                     <p>
                         <code class="inline">{{apiUrl}}/validate/<span class="accent-blue">VAT</span></code>
@@ -284,7 +287,7 @@ Side menu
                             <code class="accent-bold">VAT</code> <code class="accent-gray">String</code> <code
                                 class="accent-hard">Mandatory</code>
                             <p>
-                                The VAT number to validate. In case the VAT number is malformed, e.g. the format is not as described by the <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
+                                The VAT number to validate is the only mandatory parameter. In case the VAT number is malformed, e.g. the format is not as described by the <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
                             </p>
                             <p>
                                 All non-EU (with the excpetion of the United Kingdom) VAT numbers will be rejected.
@@ -385,10 +388,13 @@ Side menu
         
         <div class="col-md-4">
           <div class = "plan" itemscope itemtype="http://schema.org/Product">
-            <h4 class = "marg-m"><span itemprop="name">Unauthenticated</span></h4>
+            <h4 class = "marg-m">Free</h4>
+            <meta itemprop="name" content="Free EU VAT validation API" />
+            <meta itemprop="brand" content="Vattly" />
+            <meta itemprop="description" content="Free EU VAT validation API calls for individuals or small applications" />
             <div>
-              <p class = "label"><span itemprop="description">
-                For individuals or small applications aimed at a small set of users.</span><a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a>
+              <p class = "label">
+                For individuals or small applications aimed at a small set of users.<a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a>
               </p>
               <link itemprop="url" href="https://vattly.com//#subscription-plans"/>
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -398,6 +404,7 @@ Side menu
                     <span itemprop="price" content="0"></span>
                     <meta itemprop="priceCurrency" content="EUR" />
                     <span itemprop="priceSpecification" content="10 API calls per day"></span>
+                    <link itemprop="url" href="https://vattly.com//#subscription-plans"/>
                   </h4>
                 </p>
               </div>
@@ -407,46 +414,51 @@ Side menu
 
         <div class="col-md-4">
           <div class = "plan dark" itemscope itemtype="http://schema.org/Product">
-            <h4 class = "marg-m"><span itemprop="name">Business</span></h4>
+            <h4 class = "marg-m">Business</h4>
+            <meta itemprop="name" content="Business EU VAT validation API" />
+            <meta itemprop="brand" content="Vattly" />
+            <meta itemprop="description" content="EU VAT validation API for businesses and applications" />
             <div>
-              <p class = "label"><span itemprop="description">
-                For applications & businesses needing more volume.</span><a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a>
+              <p class = "label">
+                For applications & businesses needing more volume.<a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a>
               </p>
               <link itemprop="url" href="https://vattly.com//#subscription-plans"/>
-              <p>
-                <h4>
-                  <i class = "zuri-icon terminal baseline"></i><span class="accent-green">2'000</span> API calls <span class = "label">| month</span>
-                </h4>
-              </p>
-
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <p>
+                  <h4>
+                    <i class = "zuri-icon terminal baseline"></i><span class="accent-green">2'000</span> API calls <span class = "label">| month</span>
+                  </h4>
+                </p>
                 <span class="accent-bold" itemprop="price" content="8.99">8.99 &euro;</span> <span class = "label">| month</span>
                 <meta itemprop="priceCurrency" content="EUR" />
                 <span itemprop="priceSpecification" content="2000 API calls per month"></span>
+                <link itemprop="url" href="https://vattly.com//#subscription-plans"/>
               </div>
-
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class = "plan" itemscope itemtype="http://schema.org/Product">
-            <h4 class = "marg-m"><span itemprop="name">Enterprise</span></h4>
+            <h4 class = "marg-m">Enterprise</h4>
+            <meta itemprop="name" content="Enterprise EU VAT validation API" />
+            <meta itemprop="brand" content="Vattly" />
+            <meta itemprop="description" content="EU VAT validation API for enterprises and big applications" />
             <div>
-              <p class = "label"><span itemprop="description">
-                More than enough calls for most scenarios.</span><a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a> 
+              <p class = "label">
+                More than enough calls for most scenarios.<a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a> 
               </p>
               <link itemprop="url" href="https://vattly.com//#subscription-plans"/>
-              <p>
-                <h4>
-                  <i class = "zuri-icon terminal baseline"></i><span class="accent-green">10'000</span> API calls <span class = "label">| month</span>
-                </h4>
-              </p>
-              
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <p>
+                  <h4>
+                    <i class = "zuri-icon terminal baseline"></i><span class="accent-green">10'000</span> API calls <span class = "label">| month</span>
+                  </h4>
+                </p>
                 <span class="accent-bold" itemprop="price" content="34.99">34.99 &euro;</span> <span class = "label">| month</span>
                 <meta itemprop="priceCurrency" content="EUR" />
                 <span itemprop="priceSpecification" content="10000 API calls per month"></span>
+                <link itemprop="url" href="https://vattly.com//#subscription-plans"/>
               </div>
 
             </div>
