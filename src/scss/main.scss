@@ -70,6 +70,7 @@ body {
 /*! ---------------------
   Design Components
   -------------------- !*/
+
 .background {
   background: linear-gradient(90deg, $color-blue-500 0%, $color-blue-400 100%);
   top: 0;
@@ -212,8 +213,9 @@ nav.side-menu {
   z-index: 30;
 
   // Section at the bottom
-  footer {
+  .footer {
     border-top: 1px solid $color-gray-100;
+    display: inline-block;
   }
 
   .note {
@@ -305,7 +307,7 @@ nav.side-menu {
       // CLosed menu
       width: 0;
       & > .representation,
-      & > footer,
+      & > .footer,
       & > ul {
         transform: scaleX(0);
       }
@@ -317,7 +319,7 @@ nav.side-menu {
         text-align: center;
 
         & > .representation,
-        & > footer,
+        & > .footer,
         & > ul {
           transform: scaleX(1);
         }
@@ -325,6 +327,25 @@ nav.side-menu {
     }
   }
 }
+
+
+/*! ---------------------
+  Footer
+  -------------------- !*/
+footer
+{
+  background: linear-gradient(90deg, $color-blue-500 0%, $color-blue-400 100%);
+  padding: 3rem;
+
+  h4 
+  {
+    padding-top: 4rem;
+    padding-bottom:0.6rem;
+  }
+}
+
+
+
 
 /*! ---------------------
   Content formatting styles
@@ -355,7 +376,7 @@ nav.side-menu {
     @include typography-5;
   }
 
-  & > *:first-of-type
+  & > section:first-of-type
   {
     margin-bottom:24rem;
   }

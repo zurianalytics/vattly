@@ -11,7 +11,7 @@
                     <p>
                     <span itemprop="description">
 
-                        There is only one endpoint to this VAT validation API, which takes the VAT number in the request, checks if that number is valid, and if it is valid, returns additional details about the company associated with that VAT number. </span>You can use it (unauthenticated) by calling the following url: 
+                        There is only one endpoint to this VAT validation API, which takes the VAT number in the request, checks if that number is valid, and if it is valid, returns additional details about the company associated with that VAT number. </span>You can test it (unauthenticated) by calling the following url: 
                     </p>
                     <p>
                         <code class="inline">{{apiUrl}}/validate/<span class="accent-blue">VAT</span></code>
@@ -23,7 +23,7 @@
                             <code class="accent-bold">VAT</code> <code class="accent-gray">String</code> <code
                                 class="accent-hard">Mandatory</code>
                             <p>
-                                The VAT number to validate is the only mandatory parameter. In case the VAT number is malformed, e.g. the format is not as described by the <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
+                                The VAT number to validate is the only mandatory parameter. In case the VAT number is malformed, e.g. the format is not as described by the <a class = "link" href = "https://en.wikipedia.org/wiki/VAT_identification_number" target="_blank">respective national institution,</a> the API will return <span class = "accent-blue">validFormat</span>=<span class = "accent-hard">FALSE</span> and no further checks will be made.
                             </p>
                             <p>
                                 All non-EU (with the excpetion of the United Kingdom) VAT numbers will be rejected.
